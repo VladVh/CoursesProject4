@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+            http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+        version="2.1">
+
+    <tlib-version>1.0</tlib-version>
+    <short-name>shop</short-name>
+    <uri>/tags/</uri>
+
+    <tag>
+        <name>formBtn</name>
+        <tag-class>ua.kiev.univ.cyb.tags.MyButtonTag</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <name>styleClass</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>styleId</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>action</name>
+            <required>true</required>
+        </attribute>
+        <attribute>
+            <name>command</name>
+            <required>true</required>
+        </attribute>
+        <attribute>
+            <name>objId</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+</taglib>

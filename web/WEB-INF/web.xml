@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <welcome-file-list>
+        <welcome-file>home.jsp</welcome-file>
+    </welcome-file-list>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error</location>
+    </error-page>
+
+    <error-page>
+        <exception-type>java.lang.Throwable</exception-type >
+        <location>/error</location>
+    </error-page>
+
+    <filter>
+        <filter-name>AdminFilter</filter-name>
+        <filter-class>ua.kiev.univ.cyb.filter.AdminFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AdminFilter</filter-name>
+        <url-pattern>/admin.jsp</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>BookFilter</filter-name>
+        <filter-class>ua.kiev.univ.cyb.filter.BookFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>BookFilter</filter-name>
+        <url-pattern>/books.jsp</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>LibraryController</servlet-name>
+        <servlet-class>ua.kiev.univ.cyb.controller.LibraryController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LibraryController</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>UserFilter</filter-name>
+        <filter-class>ua.kiev.univ.cyb.filter.UserFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>UserFilter</filter-name>
+        <url-pattern>/order.jsp</url-pattern>
+        <url-pattern>/profile.jsp</url-pattern>
+        <url-pattern>/index.jsp</url-pattern>
+    </filter-mapping>
+
+
+
+    <servlet>
+        <servlet-name>ErrorController</servlet-name>
+        <servlet-class>ua.kiev.univ.cyb.controller.ErrorController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ErrorController</servlet-name>
+        <url-pattern>/error</url-pattern>
+    </servlet-mapping>
+
+    <jsp-config>
+        <taglib>
+            <taglib-uri>/buttonTag</taglib-uri>
+            <taglib-location>/tags/buttonTag.tld</taglib-location>
+        </taglib>
+    </jsp-config>
+</web-app>

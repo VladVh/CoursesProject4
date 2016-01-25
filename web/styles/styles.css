@@ -1,0 +1,53 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+/*  Header  */
+
+.mdl-layout__header-row {
+    padding-left: 40px;
+}
+
+.mdl-navigation__link {
+    font-size: large;
+}
+
+/*  Footer  */
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+/*  Home    */
+
+.home-headings {
+    text-align: center;
+}
+
+.img-background {
+    width: 100%;
+    z-index: 0;
+}
+
+/*  Login, Register */
+.login-content {
+    padding: 24px;
+    flex: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.reg-content {
+    padding: 24px;
+    flex: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.reg-content .mdl-card{
+    width: 400px;
+}
+
+.reg-form {
+    text-align: center;
+}
